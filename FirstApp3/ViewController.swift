@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var messageLabel: UILabel!
     
+    @IBOutlet weak var messageButton: UIButton!
     var lightOn = true
     
     let messageArray  = ["May the force be with you","Live long and prosper","To infinity and beyond","Space is big. You just won't believe how vastly, hugely, mindbogglinly big it is"]
@@ -31,12 +32,16 @@ class ViewController: UIViewController {
         print("Button Touched")
         if lightOn == true {
             self.messageLabel.text = "White"
-            view.backgroundColor = UIColor.black
+            self.messageLabel.textColor = .black
+            view.backgroundColor = UIColor.white
+            self.messageButton.setTitle("Off", for: .normal)
             
         }
         else{
             self.messageLabel.text = "Black"
-            view.backgroundColor = UIColor.white
+            self.messageLabel.textColor = .white
+            view.backgroundColor = UIColor.black
+            self.messageButton.setTitle("On", for: .normal)
         }
         lightOn = !lightOn
     }
