@@ -33,6 +33,4 @@ class ViewController: UIViewController {
         index = index + 1
         index %= self.messageArray.count
     }
-
 }
-
